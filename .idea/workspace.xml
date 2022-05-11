@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7518a4b2-41c8-45ed-9775-df95bdfc33b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/generate question v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate question v2Alternate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asking question.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate question v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate question v1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,8 +149,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.generate question v2Alternate" />
-        <item itemvalue="Python.generate question v2" />
         <item itemvalue="Python.generate question v1" />
+        <item itemvalue="Python.generate question v2" />
         <item itemvalue="Python.Code testing" />
         <item itemvalue="Python.instructions v1" />
       </list>
