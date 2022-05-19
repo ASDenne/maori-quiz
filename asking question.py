@@ -2,6 +2,7 @@ import random
 diffuclty = input(">>")
 while True:
     Numbers = ["Tahi", "rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa"]
+    mistakes = []
     if diffuclty == "Easy":
         answer: int = random.randint(1, 9)
     else:
@@ -17,6 +18,14 @@ while True:
     else:
         question = Numbers[answer // 10 - 1] + " tekau mā " + Numbers[answer % 10 - 1]
     print(f"what is {question} In english")
-    guess = input(">>")
-    
-
+    while True:
+        try:
+            guess = int(input(">>"))
+            break
+        except ValueError:
+            print("please enter guess in number format")
+    if answer == guess:
+        print("congrats you guessed correctly")
+    else:
+        print("oh sorry you got it wrong")
+        mistakes.append(guess)
