@@ -13,7 +13,8 @@ def instructions():
 
 def yes_no(question_text):
     while True:
-        Answer = input(question_text).lower()
+        print(question_text)
+        Answer = input(">>").lower()
         # if they say output program countiues
         if Answer == "yes" or Answer == "y" or Answer == "":
             return "Yes"
@@ -32,7 +33,8 @@ def yes_no(question_text):
 
 def easy_hard(question_text):
     while True:
-        Answer = input(question_text).lower()
+        print(question_text)
+        Answer = input(">>").lower()
         # if they say easy out put that
         if Answer == "easy" or Answer == "e":
             Answer = "Easy"
@@ -57,7 +59,6 @@ words= []
 instruction = yes_no("have you played before? :")
 if instruction == "No":
     instructions()
-print("next step")
 diffuclty = easy_hard("do you want to play easy or hard mode :")
 while True:
     Numbers = ["Tahi", "rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa"]
