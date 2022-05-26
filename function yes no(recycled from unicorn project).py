@@ -1,4 +1,5 @@
-'''this is a previouse piece of code i will be using for the instruction checker and difficulty checher'''
+'''this is a previouse piece of code i will be using
+   for the instruction checker and difficulty checher'''
 
 #functions
 def yes_no(question_text):

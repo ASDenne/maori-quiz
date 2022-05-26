@@ -2,7 +2,7 @@ import random
 
 
 def instructions():
-    print("the aim of the game is to guess what the maori number is in english")
+    print("the aim of the game is to guess what the maori number is")
     print("their is an easy mode and a hard mode")
     print("the easy mode is numbers 1 through 9")
     print("the hard mode is numbers 1 through 99")
@@ -58,7 +58,7 @@ if instruction == "No":
     instructions()  # prints instructions
 difficulty = easy_hard("do you want to play easy or hard mode :")  # finding out what difficulty
 while True:
-    Numbers = ["Tahi", "rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa"]
+    Numbers = ["tahi", "rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa"]
 
     if difficulty == "Easy":
         answer: int = random.randint(1, 9)
@@ -67,31 +67,32 @@ while True:
     if answer < 10:
         question = Numbers[answer - 1]  # 1-9
     elif answer == 10:  # 10
-        question = "Tekau"
+        question = "tekau"
     elif answer < 20:  # 11-19
         question = "tekau mā " + Numbers[answer % 10 - 1]
     elif answer % 10 == 0:  # ends in 0
         question = Numbers[answer // 10 - 1] + " tekau"
     else:  # everything else
         question = Numbers[answer // 10 - 1] + " tekau mā " + Numbers[answer % 10 - 1]
-    print(f"what is {question} In english")
+    print(f"what is {question}?")
     while True:
         try:
             Guess = int(input(">>"))
             break
         except ValueError:
-            print("please enter guess in number format")
+            print("please enter answer in number format")
+    rounds = rounds + 1
     if answer == Guess:
-        print("congrats you guessed correctly")
+        print("congrats you answered correctly")
     else:
         print("oh sorry you got it wrong")
         mistakes = mistakes + 1
-        words.append(question)
-    rounds = rounds + 1
-    stop = yes_no("do you want to continue?")
-    if stop == "No":
-        break
+        words.append(question+" "+str(answer))
+        stop = yes_no("do you want to continue?")
+        if stop == "No":
+            break
+
 print(F"you got {rounds - mistakes} questions right")
 print(F"you got {mistakes} questions wrong")
-print(F"your score is {rounds - mistakes} out of {rounds} or {((rounds - mistakes) / rounds) * 100}%")
-print(F"you need to work on {words}")
+print(F"your score is {rounds - mistakes} out of {rounds} or {round(((rounds - mistakes) / rounds) * 100)}%")
+print(F"you need to work on {str(words)[1:-1]}")
